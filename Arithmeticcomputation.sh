@@ -5,8 +5,9 @@ read -p "Enter number: " a
 read -p "Enter number: " b
 read -p "Enter number :" c
 #performing arithmetic operation
-operation1=`echo "scale=4; $a + $b * $c"   #|bc -1`
-operation2=`echo "scale=4; $a * $b + $c"   #|bc -1`
-
+operation1= echo "scale=4; $a + $b * $c"  #|bc -1`
+operation2= echo "scale=4; $a * $b + $c"  #|bc -1`
+operation3= echo "scale=4; $c + $a / $b"  #|bc -1`
 echo "a+b*c = $operation1"
-echo "a*b+c = #operation2"
+echo "a*b+c = $operation2"
+echo "c+a/b = $operation3"
