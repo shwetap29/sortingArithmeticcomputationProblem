@@ -25,7 +25,7 @@ done
 #printing array value
 echo "Array value is : ${array[@]}"
 
-#sorting array into descending order
+#sorting array into Ascending order
 for(( i=0; i<${#array[@]}; i++ ))
 do
       for (( j=$i+1 ; j<${#array[@]}; j++ ))
@@ -38,4 +38,4 @@ do
       fi
   done
 done
-echo "In descending order : ${array[@]}"
+echo "In Ascending order : ${array[@]}"
