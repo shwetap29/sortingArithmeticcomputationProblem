@@ -13,11 +13,14 @@ operation2= echo "scale=4; $a * $b + $c"  #|bc -1`
 Arithmetic[2]="$operation2"
 operation3= echo "scale=4; $c + $a / $b"  #|bc -1`
 Arithmetic[3]="$operation3"
-operation4=`echo "scale=4; $a % $b + $c"  #|bc -l`
+operation4=`echo "scale=4; $a % $b + $c"  #|bc -1`
 Arithmetic[4]="$operation4"
+#storing dictionary value into array
+for iterator in ${!Arithmetic[@]}
+do
+     array[$iterator]="${Arithmetic[$iterator]}"
+done
+#printing array value
+echo "Array value is : ${array[@]}"
 
-#printing output and message
-echo "a+b*c = 1 : ${Arithmetic[1]}"
-echo "a*b+c = 2 : ${Arithmetic[2]}"
-echo "c+a/b = 3 : ${Arithmetic[3]}"
-echo "a%b+c = 4 : ${Arithmetic[4]}"
+
